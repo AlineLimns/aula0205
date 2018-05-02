@@ -7,10 +7,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="270.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
     <children>
-        <Button fx:id="button" layoutX="206.0" layoutY="137.0" onAction="#handleButtonAction" text="Clica aqui!" />
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <JFXButton layoutX="46.0" layoutY="42.0" />
+        <Label fx:id="lblNum1" layoutX="36.0" layoutY="54.0" minHeight="16" minWidth="69" text="Número:" />
+      <JFXTextField fx:id="txtNum1" layoutX="36.0" layoutY="62.0" />
+      <JFXTextField fx:id="txtNum2" layoutX="36.0" layoutY="137.0" />
+      <JFXTextField fx:id="txtResultado" layoutX="36.0" layoutY="197.0" />
+      <Label fx:id="lblNum2" layoutX="36.0" layoutY="120.0" minHeight="16" minWidth="69" text="Número:" />
+      <Label fx:id="lblResultado" layoutX="36.0" layoutY="189.0" minHeight="16" minWidth="69" text="Resultado" />
+      <JFXButton fx:id="btnSoma" layoutX="219.0" layoutY="59.0" onAction="#soma" text="Soma" />
+      <JFXButton fx:id="btnDivide" layoutX="219.0" layoutY="116.0" onAction="#divide" text="Divisão" />
+      <JFXButton fx:id="btnMultiplica" layoutX="219.0" layoutY="172.0" onAction="#multiplica" text="Multiplicação" />
+      <JFXButton fx:id="btnSubtrai" layoutX="219.0" layoutY="222.0" onAction="#subtrai" text="Subtração" />
     </children>
 </AnchorPane>

@@ -5,12 +5,17 @@
  */
 package br.edu.ifro;
 
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.skins.JFXButtonSkin;
+import com.jfoenix.skins.JFXTextFieldSkin;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -19,14 +24,50 @@ import javafx.scene.control.Label;
 public class MenuPrincipalController implements Initializable {
     
     @FXML
-    private Label label;
+    private TextField txtNum1, txtNum2, txtResultado;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private Button btnSoma, btnDivide,btnMultiplica, btnSubtrai;
+    
+    @FXML
+    
+    private void soma(ActionEvent event) {
+        Double num1 = Double.parseDouble(txtNum1.getText());
+        Double num2 = Double.parseDouble(txtNum2.getText());
+        Double resultado = num1 + num2;
+        
+        txtResultado.setText(resultado.toString());
     }
     
+    @FXML
+    
+    private void divide(ActionEvent event) {
+        Double num1 = Double.parseDouble(txtNum1.getText());
+        Double num2 = Double.parseDouble(txtNum2.getText());
+        Double resultado = num1 / num2;
+        
+        txtResultado.setText(resultado.toString());
+    }
+    
+    @FXML
+    
+    private void subtrai(ActionEvent event) {
+        Double num1 = Double.parseDouble(txtNum1.getText());
+        Double num2 = Double.parseDouble(txtNum2.getText());
+        Double resultado = num1 - num2;
+        
+        txtResultado.setText(resultado.toString());
+    }
+    
+    @FXML
+    
+    private void multiplica(ActionEvent event) {
+        Double num1 = Double.parseDouble(txtNum1.getText());
+        Double num2 = Double.parseDouble(txtNum2.getText());
+        Double resultado = num1 * num2;
+        
+        txtResultado.setText(resultado.toString());
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
